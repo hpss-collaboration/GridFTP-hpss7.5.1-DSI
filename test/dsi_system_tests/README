@@ -1,0 +1,133 @@
+$URL: svn+ssh://gregthor@jenova/var/svn/dsi/branches/2.1.0/test/dsi_system_tests/README $ $Id: README 21 2017-01-30 18:18:08Z gregthor $ $Rev: 21 $
+
+This is a README for the DSI system tests 
+
+##############################################################################
+Test Prereqs
+##############################################################################
+To run the guc_system_tests.py (globus url copy system tests) the following must
+be installed and configured. The installation process for these tool are not
+covered in this README
+
+DSI
+The modified version of globus allowing the globus-url-copy tool to use
+different checksum algorithms
+HPSS
+
+To run the sdk_system_tests.py the following must be installed and configured
+
+DSI
+The modified version of globus allowing the globus-url-copy tool to use
+different checksum algorithms (This is only used for one test)
+HPSS
+globus_sdk (for python)
+
+You will also need to be connected to an outside netword
+
+for the globus_sdk navigate here for installion instructions.
+http://globus.github.io/globus-sdk-python/installation.html
+
+###############################################################################
+Test Configuration
+###############################################################################
+Before running the tests be sure to set the correct variables in the
+test_config.py file. The variables to be set are as follows 
+
+ftp_user - the LoginUser variable for gridftp.conf
+guc - the location of the globus-url-copy execuctable
+hpss_bin - the location of the hpss bin directory
+dsi_config_file - The location of the gridftp.conf file
+grid_user - The user in the grid-map file
+auth_mech - Either "unix" or "kerberos"
+auth - location of the HPSS keytab file
+sudo - command to sudo into the grid_user do not modify
+subsys_id - The subsystem to store files on
+
+The following are used specifically for the system tests using the globus sdk
+client_id - The id of the client running the test
+hpss_ep_id - The UUID of the endpoint containing the DSI and HPSS
+globus_test_ep_id - The UUID of an external globus endpoint used for testing.
+All tests have been run with Globus Tutorial Endpoint 1. Which has the
+following UUID. "ddb59aef-6d04-11e5-ba46-22000b92c6ec"
+
+globus_user - User account name used for globus webapp
+
+###############################################################################
+Getting IDs
+###############################################################################
+You will be required to have and be logged into your Globus ID to follow
+these steps
+
+1. Client ID
+
+To get a client follow the steps here
+http://globus.github.io/globus-sdk-python/tutorial.html#step-1-get-a-client
+
+If you already have a client navigate
+https:/auth.globus.org/v2/web/developer 
+
+Use the client ID listed here in your test_config.py
+
+2. HPSS endpoint ID
+
+To get your hpss_ep_id navaigate to
+https://www.globus.org/app/endpoints
+
+If you admister the endpoint click the "administered by me" tab 
+Otherwise click search all and search for the endpoint name (The one we have
+set up is IBM_HPSS_EP)
+
+Click the endpoint
+In the overview tab use the UUID listed as your hpss_ep_id
+
+3. Globus endpoint ID
+
+To get your globus_test_ep_id navaigate to
+https://www.globus.org/app/endpoints
+
+Click search all and search for the endpoint name (The one I have used is
+Globus Tutorial Endpoint 1)
+
+Click the endpoint
+In the overview tab use the UUID listed as your globus_test_ep_id
+
+###############################################################################
+Running Tests
+###############################################################################
+To run all tests in a file enter.
+>python <filename>
+
+The file names is either guc_system_tests.py or sdk_system_tests.py. 
+guc_system_tests.py contains tests that test using the globus_url_copy tool.
+sdk_system_tests.py contains tests that test using the globus_sdk. This sdk is
+used to mimic functionality of the globus webapp
+
+To run all the tests in a class
+>python <filename> <class_name>
+
+to run 1 test
+>python <filename> <class_name>.<function_name>
+
+The function name must begin with "test_" or else it is not considered a test
+case
+
+In addition you can specify a specific log level to run the tests with as
+follows
+>python <filename> <log_level>
+>python <filename> <class_name> <log_level>
+>python <filename> <class_name>.<function_name> <log_level>
+
+The log level variable is one of the following
+
+"debug" or "-d": The debug level of logging provides the most logging
+    information. Logs debug, info, warning, error and critical messages
+"info" or "-i": The info level of logging provides information as the test
+    executes. This is the default level of logging. This logs info, warning,
+    error and critical messages
+"warning" or "-w": The warning level of logging. Logs only warning, error and
+    critical messages.
+"error" or "-e": The error level of logging. Logs only error and critical
+     messages 
+"critical" or "-c": The critical level of logging logs only critical messages
+
+All tests are logged in the "./logs" folder.
