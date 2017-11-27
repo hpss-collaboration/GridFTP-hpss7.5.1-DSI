@@ -1,4 +1,3 @@
-# $URL: svn+ssh://gregthor@jenova/var/svn/dsi/branches/2.1.0/test/dsi_system_tests/multiprocess_func.py $: $id:$ $Rev: 17 $
 import multiprocessing 
 from local_file import local_file
 from functools import partial

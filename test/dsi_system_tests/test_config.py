@@ -1,4 +1,3 @@
-# $URL: svn+ssh://gregthor@jenova/var/svn/dsi/branches/2.1.0/test/dsi_system_tests/test_config.py $ $Id: test_config.py 20 2017-01-30 18:16:26Z gregthor $ $Rev: 20 $
 
 # Enter the values unique to your system here
 

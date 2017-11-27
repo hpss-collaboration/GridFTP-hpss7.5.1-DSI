@@ -1,4 +1,3 @@
-# $URL: svn+ssh://gregthor@jenova/var/svn/dsi/branches/2.1.0/test/dsi_system_tests/dsi_configuration.py $ $Id: dsi_configuration.py 16 2017-01-27 23:49:10Z gregthor $ $Rev: 16 $
 import os 
 import test_config
 

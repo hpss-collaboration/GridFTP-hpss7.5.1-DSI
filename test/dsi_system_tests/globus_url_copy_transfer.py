@@ -1,4 +1,3 @@
-# $URL: svn+ssh://gregthor@jenova/var/svn/dsi/branches/2.1.0/test/dsi_system_tests/globus_url_copy_transfer.py $ $Id: globus_url_copy_transfer.py 16 2017-01-27 23:49:10Z gregthor $ $Rev: 16 $
 import os
 from subprocess import call
 import logging

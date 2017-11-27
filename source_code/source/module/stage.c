@@ -1,4 +1,3 @@
-//$URL: svn+ssh://gregthor@jenova/var/svn/dsi/branches/2.1.0/source_code/source/module/stage.c $ $Id: stage.c 56 2017-03-20 18:48:53Z toennies $ $Rev: 56 $
 /*
  *  begin_generated_IBM_prolog
  *

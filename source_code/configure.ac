@@ -1,4 +1,3 @@
-dnl $URL: svn+ssh://gregthor@jenova/var/svn/dsi/branches/2.1.0/source_code/configure.ac $ $Id: configure.ac 55 2017-03-10 00:24:55Z toennies $ $Rev: 55 $
 
 dnl
 dnl  University of Illinois/NCSA Open Source License

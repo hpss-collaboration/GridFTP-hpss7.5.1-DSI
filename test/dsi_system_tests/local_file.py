@@ -1,4 +1,3 @@
-# $URL: svn+ssh://gregthor@jenova/var/svn/dsi/branches/2.1.0/test/dsi_system_tests/local_file.py $: $id:$ $Rev: 17 $
 import os
 from tempfile import mkstemp
 

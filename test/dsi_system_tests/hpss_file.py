@@ -1,4 +1,3 @@
-# $URL: svn+ssh://gregthor@jenova/var/svn/dsi/branches/2.1.0/test/dsi_system_tests/hpss_file.py $: $id:$ $Rev: 17 $
 import hpssclapi
 
 class hpss_file(object):

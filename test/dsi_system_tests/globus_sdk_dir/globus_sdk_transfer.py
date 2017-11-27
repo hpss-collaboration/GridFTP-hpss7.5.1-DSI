@@ -1,4 +1,3 @@
-# $URL: svn+ssh://gregthor@jenova/var/svn/dsi/branches/2.1.0/test/dsi_system_tests/globus_sdk_dir/globus_sdk_transfer.py $: $id:$ $Rev: 17 $
 import globus_sdk
 from globus_sdk_tokens import globus_sdk_tokens
 
